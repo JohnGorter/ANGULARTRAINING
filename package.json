@@ -1,0 +1,26 @@
+{
+  "name": "angular-2",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@infosupport/kc-cli": "^2.3.6",
+    "concurrently": "^4.1.0",
+    "cross-spawn": "^5.1.0",
+    "directory-tree": "^1.2.0",
+    "opn": "^4.0.2",
+    "portastic": "1.0.1"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "postinstall": "npm run link",
+    "link": "npm link ./modules/foreacher && npm link ./modules/pdfgenerator",
+    "start": "kc serve -op",
+    "serve": "kc serve",
+    "generatelabs": "pdfgenerator ./labs",
+    "generateslides": "kc printnew --url http://localhost:3000 --output Angular.pdf",
+    "printslides": "concurrently -k -n \"WEB,SLIDES\" -c \"blue,magenta\" \"npm run serve\" \"npm run generateslides\"",
+    "print": "npm run generatelabs && npm run printslides"
+  }
+}

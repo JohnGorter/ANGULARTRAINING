@@ -1,4 +1,4 @@
-### Creating a pipe
+### Creating a pipe from nothing
 
 Simply implement `PipeTransform`
 

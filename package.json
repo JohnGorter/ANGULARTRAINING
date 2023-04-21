@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "@infosupport/kc-cli": "^2.3.6",
+    "@infosupport/kc-cli": "^2.3.12",
     "concurrently": "^4.1.0",
     "cross-spawn": "^5.1.0",
     "directory-tree": "^1.2.0",
